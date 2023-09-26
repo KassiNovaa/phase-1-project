@@ -15,3 +15,21 @@ fetch(showsURL)
 .then((showsArray)=>{
     showsArray.forEach(renderShows)
 })
+// created form function that adds new tv show user inputs into the list however it does not presist yet -kp
+
+const form = document.querySelector(".add-show-form")
+console.log(form)
+
+form.addEventListener('submit',(event)=>{
+   event.preventDefault();
+    const title = event.target.name.value
+    const genre = event.target.genre.value
+    const image = event.target.image.value
+    const newTvShow = {
+        title: title,
+        genre: genre,
+        image: image
+    } 
+    renderShows(newTvShow)
+    event.target.reset()
+})
