@@ -1,6 +1,6 @@
 { 
-    "tvshows": [
-     {
+  "tvshows": [
+  {
         "id": 1,
         "title": "Game of Thrones",
         "genre": "fantasy",
@@ -17,7 +17,6 @@
         "title":"New Girl",
         "genre":"comedy",
         "image":"https://static.wikia.nocookie.net/newgirl/images/2/29/Season5Poster.png/revision/latest?cb=20180217010623"
-
       },
       {
         "id": 4,
@@ -31,12 +30,11 @@
         "genre":"mystery",
         "image":"https://flxt.tmsimg.com/assets/p185113_b_v13_bh.jpg"
       },   
-     {
+      {
         "id": 6,
         "title":"Yellowstone",
         "genre":"drama",
         "image":"https://flxt.tmsimg.com/assets/p16780458_b_h9_ab.jpg"
-     }    
-  ]
-    
+      }    
+  ]  
 }
