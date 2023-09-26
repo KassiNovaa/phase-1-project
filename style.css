@@ -1,0 +1,73 @@
+/* CSS for background and text */
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    color: #F8F9F9;
+    background-color:#566573
+}
+ /* CSS for columns  */
+ .container {
+    display: flex;
+  }
+
+  .column {
+    flex: 1;
+    padding: 10px;
+  }
+
+/* CSS for show form */
+.add-show-form {
+    padding: 70px 0;
+    border: 3px solid #E5E7E9;
+    text-align: center;
+    display: inline-block;
+}
+
+/* CSS for inner text of form boxes */
+input[type=text] {
+    width: 70%;
+    padding: 8px 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    background-color: #E5E7E9;
+    color: black;
+  }
+
+/* CSS for form submit button */
+input[type=submit] {
+    width: 70%;
+    padding: 8px 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    background-color: #E5E7E9;
+    color: black;
+}
+
+/* CSS for the detail-main section */
+#detail-main{
+    padding: 70px 0;
+    border: 3px solid #E5E7E9;
+    text-align: center;
+    display: inline-block;
+}
+/* CSS for the collection section */
+#collection {
+    padding: 70px 0;
+    border: 3px solid #E5E7E9;
+    text-align: center;
+    display: inline-block; 
+}
+
+/* CSS for header and subtitle  */
+h1{
+    background-color: #7FB3D5;
+    text-align: center;
+    padding: 10px;
+  }
+#subtitle{
+    background-color: #7FB3D5;
+    text-align: center;
+    padding: 10px;
+}
+
