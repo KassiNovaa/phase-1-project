@@ -2,26 +2,36 @@
 const Data = ((r)=> r.json())
 const showsURL = "http://localhost:3000/tvshows"
 const showsDropDown = document.getElementById(`collection`)
-//rendering a show to html
-const renderShows = (show) => {
-    const div = document.createElement(`div`)
-    div.innerText = show.title
-    div.className = `show`
-    div.addEventListener("click", () => {
-        document.getElementById("details-title").innerText = show.title
-        document.getElementById("details-genre").innerText = show.genre
-        document.getElementById("details-img").src = show.image
-    })
-    showsDropDown.append(div)
-}
+
 //fetching from DB then for eaching them
 fetch(showsURL)
 .then(Data)
 .then((showsArray)=>{
     showsArray.forEach(renderShows)
 })
-// created form function that adds new tv show user inputs into the list however it does not presist yet -kp
 
+//rendering a show to html
+const renderShows = (show) => {
+    const singleShow = document.createElement(`div`)
+    singleShow.innerText = show.title
+    singleShow.className = `show`
+    singleShow.addEventListener("click", () => {
+        document.getElementById("details-title").innerText = show.title
+        document.getElementById("details-genre").innerText = show.genre
+        document.getElementById("details-img").src = show.image
+    })
+    showsDropDown.append(singleShow)
+
+    singleShow.addEventListener('mouseover',(event) => {
+        console.log(event)
+        event.target.style.color = "orange";
+        setTimeout(() => {
+            event.target.style.color = "";
+          }, 1000);
+    })
+}
+
+// created form function that adds new tv show user inputs into the list however it does not presist yet -kp
 const form = document.querySelector(".add-show-form")
 console.log(form)
 
@@ -38,3 +48,4 @@ form.addEventListener('submit',(event)=>{
     renderShows(newTvShow)
     event.target.reset()
 })
+
