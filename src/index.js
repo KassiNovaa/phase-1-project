@@ -6,7 +6,6 @@ const showsDropDown = document.getElementById(`collection`)
 const renderShows = (show) => {
     const div = document.createElement(`div`)
     div.innerText = show.title
-    div.draggable = true
     div.className = `show`
     div.addEventListener("click", () => {
         document.getElementById("details-title").innerText = show.title
