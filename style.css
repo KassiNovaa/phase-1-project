@@ -6,9 +6,10 @@
     color: #F8F9F9;
     background-color:#566573
 }
- /* CSS for columns  */
+ /* CSS for container and its children columns  */
  .container {
     display: flex;
+    justify-content: center;
   }
 
   .column {
@@ -45,7 +46,7 @@ input[type=submit] {
 }
 
 /* CSS for the detail-main section */
-#detail-main{
+#detail-main {
     padding: 70px 0;
     border: 3px solid #E5E7E9;
     text-align: center;
@@ -60,12 +61,12 @@ input[type=submit] {
 }
 
 /* CSS for header and subtitle  */
-h1{
+h1 {
     background-color: #7FB3D5;
     text-align: center;
     padding: 10px;
   }
-#subtitle{
+#subtitle {
     background-color: #7FB3D5;
     text-align: center;
     padding: 10px;
