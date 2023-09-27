@@ -34,18 +34,32 @@ const renderShows = (show) => {
 // created form function that adds new tv show user inputs into the list however it does not presist yet -kp
 const form = document.querySelector(".add-show-form")
 console.log(form)
-
+// optimistic rendering of newTvShow
 form.addEventListener('submit',(event)=>{
    event.preventDefault();
-    const title = event.target.name.value
-    const genre = event.target.genre.value
-    const image = event.target.image.value
     const newTvShow = {
-        title: title,
-        genre: genre,
-        image: image
-    } 
-    renderShows(newTvShow)
-    event.target.reset()
+        title: event.target.name.value,
+        genre: event.target.genre.value,
+        image: event.target.image.value
+    }
+    const requestObjectPost = {
+        method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newTvShow)
+    }
+    fetch(showsURL, requestObjectPost)
+    .then((r) => {
+        if (r.ok) {
+            return r.json()
+        } else {
+            throw r.statusText}})
+    .then(newTvShowObj => {
+        console.log(`success! no danger noodles detected.`)
+        renderShows(newTvShowObj)
+        event.target.reset()
+    })
+    .catch(( error ) => console.log(error))
 })
 
