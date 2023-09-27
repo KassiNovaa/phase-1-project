@@ -2,6 +2,7 @@
 const Data = ((r)=> r.json())
 const showsURL = "http://localhost:3000/tvshows"
 const showsDropDown = document.getElementById(`collection`)
+const placeholderImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbMI_lmqrrCTrEZkZym0_XjHkDn4eqDomJsQ&usqp=CAU"
 
 //fetching from DB then for eaching them
 fetch(showsURL)
@@ -30,6 +31,7 @@ const renderShows = (show) => {
             event.target.style.color = "";
           }, 1000);
     })
+    document.getElementById("details-img").src = placeholderImage;
 }
 
 // created form function that adds new tv show user inputs into the list however it does not presist yet -kp
