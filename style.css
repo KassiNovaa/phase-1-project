@@ -6,23 +6,38 @@
     color: #F8F9F9;
     background-color:#566573
 }
+
  /* CSS for container and its children columns  */
  .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
   }
 
   .column {
     flex: 1;
     padding: 10px;
+    justify-content: center
   }
+
+/* main section */
+.details-main {
+    text-align: center;
+    padding-top: 5px;
+}
+.title {
+    text-align: center;
+    text-justify: auto;
+}
+
+/* form title */
+.showformtitle{
+    padding: 20px;
+}
 
 /* CSS for show form */
 .add-show-form {
     padding: 70px 0;
-    border: 3px solid #E5E7E9;
     text-align: center;
-    display: inline-block;
 }
 
 /* CSS for inner text of form boxes */
@@ -41,34 +56,41 @@ input[type=submit] {
     padding: 8px 10px;
     margin: 5px 0;
     box-sizing: border-box;
-    background-color: #E5E7E9;
-    color: black;
+    background-color: orange;
+    color: white;
 }
 
 /* CSS for the detail-main section */
-#detail-main {
+.img {
     padding: 70px 0;
-    border: 3px solid #E5E7E9;
+    width: 300px;
+    height: auto;
     text-align: center;
     display: inline-block;
 }
+
 /* CSS for the collection section */
-#collection {
-    padding: 70px 0;
-    border: 3px solid #E5E7E9;
+.collection {
+    padding: 80px 0;
     text-align: center;
-    display: inline-block; 
+    line-height: 2;
+    display: center; 
 }
 
 /* CSS for header and subtitle  */
 h1 {
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 50px;
+    word-spacing: 2px;
+    font-weight: 700;
     background-color: #7FB3D5;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
   }
-#subtitle {
+.subtitle {
     background-color: #7FB3D5;
     text-align: center;
     padding: 10px;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 15px;
 }
-
