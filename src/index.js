@@ -19,6 +19,7 @@ const renderShows = (show) => {
         document.getElementById("details-title").innerText = show.title
         document.getElementById("details-genre").innerText = show.genre
         document.getElementById("details-img").src = show.image
+        document.getElementById("details-img").alt = show.title + " poster"
     })
     showsDropDown.append(singleShow)
 
