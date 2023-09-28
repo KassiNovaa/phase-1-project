@@ -5,56 +5,64 @@
       "title": "Game of Thrones",
       "genre": "fantasy",
       "image": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781608872190/game-of-thrones-9781608872190_lg.jpg",
-      "comment": " "
+      "comment": " ",
+      "likes": "24"
     },
     {
       "id": 2,
       "title": "The Office",
       "genre": "comedy",
       "image": "https://roost.nbcuni.com/bin/viewasset.html/content/dam/Peacock/Landing-Pages/library/theoffice/mainpage/office-vertical-art.jpg/_jcr_content/renditions/original.JPEG",
-      "comment": " "
+      "comment": " ",
+      "likes": 1
     },
     {
       "id": 3,
       "title": "New Girl",
       "genre": "comedy",
       "image": "https://static.wikia.nocookie.net/newgirl/images/2/29/Season5Poster.png/revision/latest?cb=20180217010623",
-      "comment": " "
+      "comment": " ",
+      "likes": 1
     },
     {
       "id": 4,
       "title": "One Piece",
       "genre": "adventure",
       "image": "https://m.media-amazon.com/images/M/MV5BYzczMzllN2UtNDJmOS00MmE5LWE2MWYtNGEwODcwMDc2M2YyXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1000_.jpg",
-      "comment": " "
+      "comment": " ",
+      "likes": 1
     },
     {
       "id": 5,
       "title": "Supernatural",
       "genre": "mystery",
       "image": "https://flxt.tmsimg.com/assets/p185113_b_v13_bh.jpg",
-      "comment": " "
+      "comment": " ",
+      "likes": 1
     },
     {
       "id": 6,
       "title": "Yellowstone",
       "genre": "drama",
       "image": "https://flxt.tmsimg.com/assets/p16780458_b_h9_ab.jpg",
-      "comment": " "
+      "comment": " ",
+      "likes": 1
     },
     {
       "title": "Fringe",
       "genre": "Sci Fi",
       "image": "https://m.media-amazon.com/images/I/61qdNesA8cL._AC_UF894,1000_QL80_.jpg",
       "id": 7,
-      "comment": " "
+      "comment": " ",
+      "likes": 1
     },
     {
       "title": "Castlevania",
       "genre": "anime",
       "image": "https://m.media-amazon.com/images/M/MV5BMjAzMjU2MjYzMl5BMl5BanBnXkFtZTgwNTQ4Nzk1NjM@._V1_.jpg",
       "id": 8,
-      "comment": " "
+      "comment": " ",
+      "likes": 1
     }
   ]
 }

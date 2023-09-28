@@ -1,12 +1,12 @@
 //just a const list that may come in handy later
-const Data = ((r)=> r.json())
-const showsURL = "http://localhost:3000/tvshows"
+const data = ((r)=> r.json())
+const showsURL = "http://localhost:3000/tvshows/"
 const showsDropDown = document.getElementById(`collection`)
 const placeholderImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbMI_lmqrrCTrEZkZym0_XjHkDn4eqDomJsQ&usqp=CAU"
 
 //fetching from DB then for eaching them
 fetch(showsURL)
-.then(Data)
+.then(data)
 .then((showsArray)=>{
     showsArray.forEach(renderShows)
     const firstShow = showsArray[0]
@@ -19,6 +19,9 @@ const displayShow = (show) => {
     document.getElementById("details-img").src = show.image
     document.getElementById("details-img").alt = show.title + " poster"
     document.getElementById("details-comment").innerText = show.comment
+    document.getElementById(`details-like`).innerText = show.likes
+    document.getElementById(`details-like`).class = show.id
+
 }
 //rendering a show to html
 const renderShows = (show) => {
@@ -48,7 +51,8 @@ form.addEventListener('submit',(event)=>{
         title: event.target.name.value,
         genre: event.target.genre.value,
         image: event.target.image.value,
-        comment: event.target.comment.value
+        comment: event.target.comment.value,
+        likes: 1
     }
     const requestObjectPost = {
         method: 'POST',
@@ -72,5 +76,28 @@ form.addEventListener('submit',(event)=>{
 })
 
 document.addEventListener(`DOMContentLoaded`, ()=>{
-    //console.log(`add top rated show to display`)
+    console.log(`Meow Meow said the webpage`)
 })
+const likeButton = document.getElementById(`details-like`)
+    likeButton.addEventListener(`click`,()=>{
+        likeButton.innerText++
+        let updatedLike = { 
+            likes: likeButton.innerText
+        }
+        console.log(likeButton.class)
+        const patchObj = {
+            method: "PATCH",
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(updatedLike)
+        }
+        fetch(`http://localhost:3000/tvshows/${likeButton.class}`, patchObj)
+        .then((r)=>{
+            if (r.ok) {
+                    return r.json()
+            } else {
+                throw r.statusText}})
+        .then((data) => console.log(data))
+        .catch((error) => console.log(error))
+    })
