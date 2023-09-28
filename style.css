@@ -27,6 +27,12 @@
 .title {
     text-align: center;
     text-justify: auto;
+    position: relative;
+    top: 50px;
+}
+.genre {
+    text-align: center;
+    
 }
 
 /* form title */
@@ -57,6 +63,7 @@ input[type=submit] {
     margin: 5px 0;
     box-sizing: border-box;
     background-color: orange;
+    border-radius: 25px;
     color: white;
 }
 
@@ -75,6 +82,10 @@ input[type=submit] {
     text-align: center;
     line-height: 2;
     display: center; 
+    background-color: #7FB3D5;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 25px;
 }
 
 /* CSS for header and subtitle  */
@@ -94,3 +105,26 @@ h1 {
     font-family: "Lucida Console", Monaco, monospace;
     font-size: 15px;
 }
+/* drag and drop list */
+/* .dragContainer {
+    background-color: #333;
+    padding: 1rem;
+    margin-top: 1rem;
+  } */
+  
+  .draggable {
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid black;
+    cursor: move;
+    color: black;
+  }
+  
+  .draggable.dragging {
+    opacity: .5;
+  }
+
+  .heart{
+    background-color:#566573;
+    border: #566573;
+  }
