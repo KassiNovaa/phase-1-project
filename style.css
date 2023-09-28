@@ -1,89 +1,97 @@
 /* CSS for background and text */
 * {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
-    color: #F8F9F9;
-    background-color:#566573
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  color: #F8F9F9;
+  background-color:#566573
 }
 
- /* flex for container and its children columns  */
- .container {
-    display: flex;
-    justify-content: space-around;
-  }
+/* flex for container and its children columns  */
+.container {
+  display: flex;
+  justify-content: space-around;
+}
 
-  .column {
-    flex: 1;
-    padding: 10px;
-    justify-content: center
-  }
+.column {
+  flex: 1;
+  padding: 10px;
+  justify-content: center
+}
 
 /* main section */
 .details-main {
-    text-align: center;
-    padding-top: 30px;
+  text-align: center;
+  padding-top: 30px;
 }
 .title {
-    text-align: center;
-    text-justify: auto;
-    position: relative;
-    top: 50px;
-    font-family: monospace, Lucida;
-    color: orange;
-    font-size: 30px;
-    font-weight: 500;
-    background-clip: text;
-    -webkit-background-clip: text;
+  text-align: center;
+  text-justify: auto;
+  position: relative;
+  top: 50px;
+  font-family: monospace, Lucida;
+  color: orange;
+  font-size: 40px;
+  font-weight: 500;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 .genre {
-    text-align: center;
-    line-height: -100px;
+  text-align: center;
+  text-justify: auto;
+  position: relative;
+  top: 50px;
+  font-family: monospace, Lucida;
+  color: orange;
+  font-size: 20px;
+  font-weight: 500;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 /* form title */
 .showformtitle{
-    padding: 20px;
-    position: relative;
-    font-family: "Lucida Console", "Monaco", monospace;
-    color: orange;
-    font-size: 25px;
-    font-weight: 500;
+  padding: 20px;
+  position: relative;
+  font-family: "Jazz LET", "fantasy";
+  color: orange;
+  font-size: 25px;
+  font-weight: 500;
 }
 
 /* CSS for show form */
 .add-show-form {
-    padding: 70px 0;
-    text-align: center;
+  padding: 70px 0;
+  text-align: center;
 }
 
 /* CSS for inner text of form boxes */
 input[type=text] {
-    width: 70%;
-    padding: 8px 10px;
-    margin: 5px 0;
-    box-sizing: border-box;
-    background-color: #E5E7E9;
-    color: black;
-  }
+  width: 70%;
+  padding: 8px 10px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  background-color: #E5E7E9;
+  color: black;
+}
 
 /* CSS for form submit button */
 input[type=submit] {
-    width: 70%;
-    padding: 8px 10px;
-    margin: 5px 0;
-    box-sizing: border-box;
-    background-color: orange;
-    border-radius: 25px;
-    color: white;
+  width: 70%;
+  padding: 8px 10px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  background-color: orange;
+  border-radius: 25px;
+  color: white;
 }
 /* CSS for the detail-main section */
 .img {
-    padding: 70px 0;
-    width: 300px;
-    height: auto;
-    text-align: center;
-    display: inline-block;
+  padding: 70px 0;
+  width: 300px;
+  height: auto;
+  text-align: center;
+  display: inline-block;
 }
 
 /* CSS for the collection section */
@@ -103,14 +111,14 @@ input[type=submit] {
 }
 /* CSS for header and subtitle  */
 h1 {
-    font-family: Impact, "Charcoal", sans-serif;
-    font-size: 50px;
-    word-spacing: 2px;
-    font-weight: 700;
-    background-color: #7FB3D5;
-    text-align: center;
-    padding: 5px;
-  }
+  font-family: Impact, "Charcoal", sans-serif;
+  font-size: 50px;
+  word-spacing: 2px;
+  font-weight: 700;
+  background-color: #7FB3D5;
+  text-align: center;
+  padding: 5px;
+}
 .subtitle {
   background-color: #7FB3D5;
   text-align: center;
@@ -120,14 +128,19 @@ h1 {
 }
 .comment-box {
   background-color: transparent;
-  padding: 10px;
+  padding: 20px;
   border: 5px solid #7FB3D5;
   border-radius: 5px;
   width: fit-content;
   text-align: left;
+  top: 300px;
+  font-family: "Lucida Console", "Monaco", monospace;
 }
-  .heart{
-    padding: 30px;
-    background-color:#566573;
-    border: #566573;
-  }
+.like {
+  background-color:orange;
+  border: 3px solid #566573;
+  width: 40px;
+  height: 25px;
+  text-justify: center;
+  border-radius: 25px;
+}
