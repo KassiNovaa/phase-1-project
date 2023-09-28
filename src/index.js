@@ -1,12 +1,12 @@
 //just a const list that may come in handy later
-const data = ((r)=> r.json())
+const parseJSON = ((r)=> r.json())
 const showsURL = "http://localhost:3000/tvshows/"
 const showsDropDown = document.getElementById(`collection`)
 const placeholderImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbMI_lmqrrCTrEZkZym0_XjHkDn4eqDomJsQ&usqp=CAU"
 
 //fetching from DB then for eaching them
 fetch(showsURL)
-.then(data)
+.then(parseJSON)
 .then((showsArray)=>{
     showsArray.forEach(renderShows)
     const firstShow = showsArray[0]
@@ -28,7 +28,12 @@ const renderShows = (show) => {
     const singleShow = document.createElement(`div`)
     singleShow.innerText = show.title
     singleShow.className = `show`
-    singleShow.addEventListener("click", () => {displayShow(show)})
+    singleShow.addEventListener("click", () => {
+        fetch(`http://localhost:3000/tvshows/${show.id}`)
+        .then(parseJSON)
+        .then(displayShow)
+        //displayShow(show)
+    })
     showsDropDown.append(singleShow)
 
     singleShow.addEventListener('mouseover',(event) => {
@@ -36,7 +41,7 @@ const renderShows = (show) => {
         event.target.style.color = "orange";
         setTimeout(() => {
             event.target.style.color = "";
-          }, 1000);
+        }, 1000);
     })
     document.getElementById("details-img").src = placeholderImage;
 }
@@ -79,25 +84,19 @@ document.addEventListener(`DOMContentLoaded`, ()=>{
     console.log(`Meow Meow said the webpage`)
 })
 const likeButton = document.getElementById(`details-like`)
-    likeButton.addEventListener(`click`,()=>{
-        likeButton.innerText++
-        let updatedLike = { 
-            likes: likeButton.innerText
-        }
-        console.log(likeButton.class)
-        const patchObj = {
-            method: "PATCH",
-            headers:{
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(updatedLike)
-        }
-        fetch(`http://localhost:3000/tvshows/${likeButton.class}`, patchObj)
-        .then((r)=>{
-            if (r.ok) {
-                    return r.json()
-            } else {
-                throw r.statusText}})
-        .then((data) => console.log(data))
-        .catch((error) => console.log(error))
-    })
+likeButton.addEventListener(`click`,()=>{
+    likeButton.innerText++
+    let updatedLike = { 
+        likes: likeButton.innerText
+    }
+    console.log(likeButton.class)
+    const patchObj = {
+        method: "PATCH",
+        headers:{
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updatedLike)
+    }
+    fetch(`http://localhost:3000/tvshows/${likeButton.class}`, patchObj)
+    
+})
