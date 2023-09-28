@@ -4,54 +4,13 @@ const showsURL = "http://localhost:3000/tvshows"
 const showsDropDown = document.getElementById(`collection`)
 const placeholderImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbMI_lmqrrCTrEZkZym0_XjHkDn4eqDomJsQ&usqp=CAU"
 
-//fetching from DB then for eaching them
-// fetch(showsURL)
-// .then(Data)
-// .then((showsArray)=>{
-//     showsArray.forEach(renderShows)
-// })
+// fetching from DB then for eaching them
+fetch(showsURL)
+.then(Data)
+.then((showsArray)=>{
+    showsArray.forEach(renderShows)
+})
 
-// Rendering a show to HTML
-const renderShows = (show) => {
-    const singleShow = document.createElement(`div`);
-    singleShow.innerText = show.title;
-    singleShow.className = `show`;
-    singleShow.draggable = true;
-  
-    singleShow.addEventListener("click", () => {
-      document.getElementById("details-title").innerText = show.title;
-      document.getElementById("details-genre").innerText = show.genre;
-      document.getElementById("details-img").src = show.image;
-      document.getElementById("details-img").alt = show.title + " poster";
-    });
-    
-    singleShow.addEventListener("dragstart", (e) => {
-        e.dataTransfer.setData("text/plain", e.target.id);
-      });
-  
-    singleShow.addEventListener("dragover", (e) => {
-      e.preventDefault();
-    });
-  
-    singleShow.addEventListener("dragenter", (e) => {
-      e.target.classList.add("drag-over");
-    });
-  
-    singleShow.addEventListener("dragleave", (e) => {
-      e.target.classList.remove("drag-over");
-    });
-  
-    singleShow.addEventListener("drop", (e) => {
-      e.preventDefault();
-      const itemId = e.dataTransfer.getData("text/plain");
-      const item = document.getElementById(itemId);
-      e.target.parentElement.insertBefore(item, e.target.nextSibling);
-      e.target.classList.remove("drag-over");
-    });
-  
-    showsDropDown.append(singleShow);
-  };
-  
   // Fetching shows data and rendering them
   fetch(showsURL)
     .then(response => response.json())
@@ -60,32 +19,29 @@ const renderShows = (show) => {
     })
     .catch(error => console.error(error));
 
-//rendering a show to html
-// const renderShows = (show) => {
-//     const singleShow = document.createElement(`div`)
-//     singleShow.innerText = show.title
-//     singleShow.className = `draggable`
-//     singleShow.draggable = true
-//     singleShow.addEventListener("click", () => {
-//         document.getElementById("details-title").innerText = show.title
-//         document.getElementById("details-genre").innerText = show.genre
-//         document.getElementById("details-img").src = show.image
-//         document.getElementById("details-img").alt = show.title + " poster"
-//     })
-//     showsDropDown.append(singleShow)
+// rendering a show to html
+const renderShows = (show) => {
+    const singleShow = document.createElement(`div`)
+    singleShow.innerText = show.title
+    singleShow.className = `draggable`
+    singleShow.draggable = true
+    singleShow.addEventListener("click", () => {
+        document.getElementById("details-title").innerText = show.title
+        document.getElementById("details-genre").innerText = show.genre
+        document.getElementById("details-img").src = show.image
+        document.getElementById("details-img").alt = show.title + " poster"
+    })
+    showsDropDown.append(singleShow)
 
-//     singleShow.addEventListener('mouseover',(event) => {
-//         console.log(event)
-//         event.target.style.color = "orange";
-//         setTimeout(() => {
-//             event.target.style.color = "";
-//           }, 1000);
-//     })
+    singleShow.addEventListener('mouseover',(event) => {
+        console.log(event)
+        event.target.style.color = "orange";
+        setTimeout(() => {
+            event.target.style.color = "";
+          }, 1000);
+    })
     
-// document.getElementById("details-img").src = placeholderImage;
-
-// const draggables = document.querySelectorAll('.draggable')
-// // const dragContainer = document.querySelectorAll('.dragContainer')
+document.getElementById("details-img").src = placeholderImage;
 
 // draggables.forEach(draggable => {
 //   draggable.addEventListener('dragstart', () => {
