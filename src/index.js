@@ -1,12 +1,12 @@
 //just a const list that may come in handy later
-const Data = ((r)=> r.json())
+const data = ((r)=> r.json())
 const showsURL = "http://localhost:3000/tvshows"
 const showsDropDown = document.getElementById(`collection`)
 const placeholderImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbMI_lmqrrCTrEZkZym0_XjHkDn4eqDomJsQ&usqp=CAU"
 
 //fetching from DB then for eaching them
 fetch(showsURL)
-.then(Data)
+.then(data)
 .then((showsArray)=>{
     showsArray.forEach(renderShows)
     const firstShow = showsArray[0]
@@ -15,7 +15,7 @@ fetch(showsURL)
 //sep function
 const displayShow = (show) => {
     document.getElementById("details-title").innerText = show.title
-    document.getElementById("details-genre").innerText = show.genre
+    document.getElementById("details-genre").innerText = "Genre: "+ show.genre
     document.getElementById("details-img").src = show.image
     document.getElementById("details-img").alt = show.title + " poster"
     document.getElementById("details-comment").innerText = show.comment
@@ -41,6 +41,7 @@ const renderShows = (show) => {
 // created form function that adds new tv show user inputs into the list however it does not presist yet -kp
 const form = document.querySelector(".add-show-form")
 console.log(form)
+
 // optimistic rendering of newTvShow
 form.addEventListener('submit',(event)=>{
    event.preventDefault();
@@ -71,6 +72,6 @@ form.addEventListener('submit',(event)=>{
     .catch(( error ) => console.log(error))
 })
 
-document.addEventListener(`DOMContentLoaded`, ()=>{
-    //console.log(`add top rated show to display`)
-})
+// document.addEventListener(`DOMContentLoaded`, ()=>{
+//     //console.log(`add top rated show to display`)
+// })

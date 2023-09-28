@@ -7,7 +7,7 @@
     background-color:#566573
 }
 
- /* CSS for container and its children columns  */
+ /* flex for container and its children columns  */
  .container {
     display: flex;
     justify-content: space-around;
@@ -22,16 +22,33 @@
 /* main section */
 .details-main {
     text-align: center;
-    padding-top: 5px;
+    padding-top: 30px;
 }
 .title {
     text-align: center;
     text-justify: auto;
+    position: relative;
+    top: 50px;
+    font-family: monospace, Lucida;
+    color: orange;
+    font-size: 30px;
+    font-weight: 500;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+.genre {
+    text-align: left;
+    line-height: -100px;
 }
 
 /* form title */
 .showformtitle{
     padding: 20px;
+    position: relative;
+    font-family: "Lucida Console", "Monaco", monospace;
+    color: orange;
+    font-size: 25px;
+    font-weight: 500;
 }
 
 /* CSS for show form */
@@ -57,9 +74,9 @@ input[type=submit] {
     margin: 5px 0;
     box-sizing: border-box;
     background-color: orange;
+    border-radius: 25px;
     color: white;
 }
-
 /* CSS for the detail-main section */
 .img {
     padding: 70px 0;
@@ -76,10 +93,17 @@ input[type=submit] {
     line-height: 2;
     display: center; 
 }
+/* title for the shows */
 
+.list{
+  font-family: "Lucida Console", "Monaco", monospace;
+  color: orange;
+  font-size: 25px;
+  font-weight: 500;
+}
 /* CSS for header and subtitle  */
 h1 {
-    font-family: Impact, Charcoal, sans-serif;
+    font-family: Impact, "Charcoal", sans-serif;
     font-size: 50px;
     word-spacing: 2px;
     font-weight: 700;
@@ -88,9 +112,21 @@ h1 {
     padding: 5px;
   }
 .subtitle {
-    background-color: #7FB3D5;
-    text-align: center;
-    padding: 10px;
-    font-family: "Lucida Console", Monaco, monospace;
-    font-size: 15px;
+  background-color: #7FB3D5;
+  text-align: center;
+  padding: 10px;
+  font-family: "Lucida Console", "Monaco", monospace;
+  font-size: 15px;
 }
+.comment-box {
+  background-color: transparent;
+  padding: 10px;
+  border: 5px solid #7FB3D5;
+  border-radius: 5px;
+  width: fit-content;
+  text-align: left;
+}
+  /* .heart{
+    background-color:#566573;
+    border: #566573;
+  } */
