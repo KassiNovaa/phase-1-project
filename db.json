@@ -5,56 +5,72 @@
       "title": "Game of Thrones",
       "genre": "fantasy",
       "image": "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781608872190/game-of-thrones-9781608872190_lg.jpg",
-      "comment": "There is drama, action, dragons, magic ... I mean there are so many whys!! If you have not binged this series yet this is your SIGN 🐉 "
+      "comment": "There is drama, action, dragons, magic ... I mean there are so many whys!! If you have not binged this series yet this is your SIGN 🐉 ",
+      "likes": "29"
     },
     {
       "id": 2,
       "title": "The Office",
       "genre": "comedy",
       "image": "https://roost.nbcuni.com/bin/viewasset.html/content/dam/Peacock/Landing-Pages/library/theoffice/mainpage/office-vertical-art.jpg/_jcr_content/renditions/original.JPEG",
-      "comment": " Just watch Stress Relief and you'll understand why you have to continue watching this show 😂😂😂 "
+      "comment": " Just watch Stress Relief and you'll understand why you have to continue watching this show 😂😂😂 ",
+      "likes": "30"
     },
     {
       "id": 3,
       "title": "New Girl",
       "genre": "comedy",
       "image": "https://static.wikia.nocookie.net/newgirl/images/2/29/Season5Poster.png/revision/latest?cb=20180217010623",
-      "comment": " This group of friends gives you all the good feels and laughs "
+      "comment": " This group of friends gives you all the good feels and laughs ",
+      "likes": "21"
     },
     {
       "id": 4,
       "title": "One Piece",
       "genre": "adventure",
       "image": "https://m.media-amazon.com/images/M/MV5BYzczMzllN2UtNDJmOS00MmE5LWE2MWYtNGEwODcwMDc2M2YyXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1000_.jpg",
-      "comment": " Live action actually follows the story and pacing!!! "
+      "comment": " Live action actually follows the story and pacing!!! ",
+      "likes": "15"
     },
     {
       "id": 5,
       "title": "Supernatural",
       "genre": "mystery",
       "image": "https://flxt.tmsimg.com/assets/p185113_b_v13_bh.jpg",
-      "comment": " Should of ended season 4 or 5 but give it a go until then "
+      "comment": " Should of ended season 4 or 5 but give it a go until then ",
+      "likes": "10"
     },
     {
       "id": 6,
       "title": "Yellowstone",
       "genre": "drama",
       "image": "https://flxt.tmsimg.com/assets/p16780458_b_h9_ab.jpg",
-      "comment": " its like if the god father was rancher.. so watch it "
+      "comment": " its like if the god father was rancher.. so watch it ",
+      "likes": "20"
     },
     {
       "title": "Fringe",
       "genre": "Sci Fi",
       "image": "https://m.media-amazon.com/images/I/61qdNesA8cL._AC_UF894,1000_QL80_.jpg",
       "id": 7,
-      "comment": " Hidden gem of a show! Super underated. Try it out. 💎 "
+      "comment": " Hidden gem of a show! Super underated. Try it out. 💎 ",
+      "likes": "12"
     },
     {
       "title": "Castlevania",
       "genre": "anime",
       "image": "https://m.media-amazon.com/images/M/MV5BMjAzMjU2MjYzMl5BMl5BanBnXkFtZTgwNTQ4Nzk1NjM@._V1_.jpg",
       "id": 8,
-      "comment": " Is there anything really to say it castlevania... 🧛🏽 "
+      "comment": " Is there anything really to say it castlevania... 🧛🏽 ",
+      "likes": "10"
+    },
+    {
+      "title": "Vampire Diares",
+      "genre": "fantasy",
+      "image": "https://m.media-amazon.com/images/S/pv-target-images/e9ac41098eeadb9e36875ecbf3931dd8222dd5ca8f205865ff499fbb77c12d8e.jpg",
+      "comment": "LOVE all the love triangles, drama and vampires!!",
+      "likes": "5",
+      "id": 9
     }
   ]
 }

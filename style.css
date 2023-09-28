@@ -37,7 +37,7 @@
     -webkit-background-clip: text;
 }
 .genre {
-    text-align: left;
+    text-align: center;
     line-height: -100px;
 }
 
@@ -126,7 +126,8 @@ h1 {
   width: fit-content;
   text-align: left;
 }
-  /* .heart{
+  .heart{
+    padding: 30px;
     background-color:#566573;
     border: #566573;
-  } */
+  }
