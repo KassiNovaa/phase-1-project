@@ -53,6 +53,12 @@
       "genre": "fantasy",
       "image": "https://m.media-amazon.com/images/S/pv-target-images/e9ac41098eeadb9e36875ecbf3931dd8222dd5ca8f205865ff499fbb77c12d8e.jpg",
       "id": 9
+    },
+    {
+      "title": "Vampire Diares",
+      "genre": "fantasy",
+      "image": "https://m.media-amazon.com/images/S/pv-target-images/e9ac41098eeadb9e36875ecbf3931dd8222dd5ca8f205865ff499fbb77c12d8e.jpg",
+      "id": 10
     }
   ]
 }

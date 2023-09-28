@@ -1,23 +1,23 @@
 //just a const list that may come in handy later
-const Data = ((r)=> r.json())
+const data = ((r)=> r.json())
 const showsURL = "http://localhost:3000/tvshows"
 const showsDropDown = document.getElementById(`collection`)
 const placeholderImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbMI_lmqrrCTrEZkZym0_XjHkDn4eqDomJsQ&usqp=CAU"
 
 // fetching from DB then for eaching them
 fetch(showsURL)
-.then(Data)
+.then(data)
 .then((showsArray)=>{
     showsArray.forEach(renderShows)
 })
 
-  // Fetching shows data and rendering them
-  fetch(showsURL)
-    .then(response => response.json())
-    .then(showsArray => {
-      showsArray.forEach(renderShows);
-    })
-    .catch(error => console.error(error));
+//   // Fetching shows data and rendering them
+//   fetch(showsURL)
+//     .then(response => response.json())
+//     .then(showsArray => {
+//       showsArray.forEach(renderShows);
+//     })
+//     .catch(error => console.error(error));
 
 // rendering a show to html
 const renderShows = (show) => {
@@ -34,13 +34,15 @@ const renderShows = (show) => {
     showsDropDown.append(singleShow)
 
     singleShow.addEventListener('mouseover',(event) => {
-        console.log(event)
+        // console.log(event)
         event.target.style.color = "orange";
         setTimeout(() => {
             event.target.style.color = "";
           }, 1000);
     })
-    
+}
+
+    // add place holder image to webpage when first loaded
 document.getElementById("details-img").src = placeholderImage;
 
 // draggables.forEach(draggable => {
@@ -57,6 +59,7 @@ document.getElementById("details-img").src = placeholderImage;
 // created form function that adds new tv show user inputs into the list however it does not presist yet -kp
 const form = document.querySelector(".add-show-form")
 console.log(form)
+
 // optimistic rendering of newTvShow
 form.addEventListener('submit',(event)=>{
    event.preventDefault();
@@ -89,6 +92,9 @@ form.addEventListener('submit',(event)=>{
 // const heartButton = document.querySelector( 'heart' )
 // const likesContainer = document.querySelector( '.number-of-likes' )
 // heartButton.addEventListener('click',(event)=>{
+// update tv show object like prop
+// patch into database 
+
 //     // when user clicks button number of likes will increase
 //     // when user click different tv show the number of likes reset
 //     // possibly save number of likes when user clicks back on image
