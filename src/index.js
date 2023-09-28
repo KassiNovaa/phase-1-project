@@ -9,19 +9,23 @@ fetch(showsURL)
 .then(Data)
 .then((showsArray)=>{
     showsArray.forEach(renderShows)
+    const firstShow = showsArray[0]
+    displayShow(firstShow)
 })
-
+//sep function
+const displayShow = (show) => {
+    document.getElementById("details-title").innerText = show.title
+    document.getElementById("details-genre").innerText = show.genre
+    document.getElementById("details-img").src = show.image
+    document.getElementById("details-img").alt = show.title + " poster"
+    document.getElementById("details-comment").innerText = show.comment
+}
 //rendering a show to html
 const renderShows = (show) => {
     const singleShow = document.createElement(`div`)
     singleShow.innerText = show.title
     singleShow.className = `show`
-    singleShow.addEventListener("click", () => {
-        document.getElementById("details-title").innerText = show.title
-        document.getElementById("details-genre").innerText = show.genre
-        document.getElementById("details-img").src = show.image
-        document.getElementById("details-img").alt = show.title + " poster"
-    })
+    singleShow.addEventListener("click", () => {displayShow(show)})
     showsDropDown.append(singleShow)
 
     singleShow.addEventListener('mouseover',(event) => {
@@ -43,7 +47,8 @@ form.addEventListener('submit',(event)=>{
     const newTvShow = {
         title: event.target.name.value,
         genre: event.target.genre.value,
-        image: event.target.image.value
+        image: event.target.image.value,
+        comment: event.target.comment.value
     }
     const requestObjectPost = {
         method: 'POST',
@@ -66,3 +71,6 @@ form.addEventListener('submit',(event)=>{
     .catch(( error ) => console.log(error))
 })
 
+document.addEventListener(`DOMContentLoaded`, ()=>{
+    //console.log(`add top rated show to display`)
+})
