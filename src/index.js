@@ -15,7 +15,7 @@ fetch(showsURL)
 //sep function
 const displayShow = (show) => {
     document.getElementById("details-title").innerText = show.title
-    document.getElementById("details-genre").innerText = show.genre
+    document.getElementById("details-genre").innerText = "Genre: "+ show.genre
     document.getElementById("details-img").src = show.image
     document.getElementById("details-img").alt = show.title + " poster"
     document.getElementById("details-comment").innerText = show.comment
@@ -49,6 +49,7 @@ const renderShows = (show) => {
 // created form function that adds new tv show user inputs into the list however it does not presist yet -kp
 const form = document.querySelector(".add-show-form")
 console.log(form)
+
 // optimistic rendering of newTvShow
 form.addEventListener('submit',(event)=>{
    event.preventDefault();
